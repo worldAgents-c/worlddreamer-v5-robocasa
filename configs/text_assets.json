@@ -1,0 +1,9 @@
+{
+  "revision": "6748a1f5861a859aca13b30a0c65dd6f9942ca35",
+  "files": {
+    "text_encoder/config.json": {"sha256": "debbfd838de51b57eea2f077ad1f5080e59b846af4346377531bbee892c4c48d"},
+    "text_encoder/model.safetensors": {"sha256": "2957deadcb660bb6e411a88c4f8860c5972f7f4eb856ac520d2628d1e225359f"},
+    "tokenizer/tokenizer.json": {"sha256": "3220c5bec16e78ddf8e59c08fecdede7e8d31820cb5b3e69f17fed6a29a0b30c"},
+    "tokenizer/tokenizer_config.json": {"sha256": "e20ed2c2c1398cc0d008bcc972d5df38554b7a44e975479118dcc999183f6e91"}
+  }
+}

@@ -1,0 +1,15 @@
+__pycache__/
+.DS_Store
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv*/
+outputs/
+weights/
+text-cache/
+*.safetensors
+*.pt
+*.npz
+*.mp4

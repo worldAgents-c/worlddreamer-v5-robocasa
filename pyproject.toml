@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "world-dreamer-robocasa"
+version = "0.1.0"
+description = "World Dreamer v5 inference and simulation evaluation for RoboCasa"
+requires-python = ">=3.10,<3.11"
+license-files = ["licenses/*.txt"]
+dependencies = ["numpy==1.26.4", "Pillow>=10,<12", "PyYAML>=6,<7", "scipy>=1.10,<2"]
+
+[project.optional-dependencies]
+model = [
+    "torch==2.9.0",
+    "torchvision==0.24.0",
+    "transformers==4.57.1",
+    "accelerate==1.11.0",
+    "safetensors==0.8.0",
+    "diffusers @ https://github.com/huggingface/diffusers/archive/fc77592427a3ad802ff4924ede31541d809097a2.tar.gz",
+]
+
+[project.scripts]
+robocasa-policy = "robocasa_runtime.server:main"
+robocasa-evaluate = "robocasa_runtime.rollout:main"
+robocasa-text-cache = "robocasa_runtime.text_cache:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+world_dreamer_v5 = ["models/profiles/*.json"]
+
+[tool.setuptools.data-files]
+"." = ["requirements-text.txt"]
+"scripts" = ["scripts/*.sh"]
+"configs" = ["configs/*.yaml", "configs/*.json"]
+"assets" = ["assets/*.gif"]
